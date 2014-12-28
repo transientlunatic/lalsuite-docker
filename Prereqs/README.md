@@ -11,6 +11,7 @@ Contents
 - The "Development Libraries" groupinstall
 - zlib
 - FFTW
+- libxml2
 - [GSL 1.6](https://www.gnu.org/software/gsl/)
 - [FrameL 8.21](http://lappweb.in2p3.fr/virgo/FrameL/)
 - [MetaIO 8.3.0](https://www.lsc-group.phys.uwm.edu/daswg/projects/metaio.html)

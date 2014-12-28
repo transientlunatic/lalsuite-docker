@@ -2,7 +2,7 @@ FROM ringo/scientific:6.5
 MAINTAINER Nathaniel Waisbrot <code@waisbrot.net>
 
 RUN yum -y groupinstall "Development Tools" "Development Libraries"
-RUN yum install -y zlib-devel fftw-devel
+RUN yum install -y zlib-devel fftw-devel libxml2-devel glib2-devel
 
 # GSL (latest version is not in RPM)
 RUN mkdir -p /opt/gsl/src \
