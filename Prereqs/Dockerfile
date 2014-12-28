@@ -9,7 +9,7 @@ RUN mkdir -p /opt/gsl/src \
  && cd /opt/gsl/src \
  && wget http://mirrors.ibiblio.org/gnu/ftp/gnu/gsl/gsl-1.16.tar.gz -O - \
     | tar xzf - \
- && cd /opt/gsl/src/gsl-1.16
+ && cd /opt/gsl/src/gsl-1.16 \
  && ./configure \
  && make \
  && make install
@@ -36,3 +36,5 @@ RUN mkdir -p /opt/metaio/src \
 
 ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib64/pkgconfig
 ENV LD_LIBRARY_PATH=/usr/local/lib
+
+CMD ["/bin/bash"]
