@@ -1,8 +1,9 @@
-FROM ringo/scientific:6.5
-MAINTAINER Nathaniel Waisbrot <code@waisbrot.net>
+FROM ringo/scientific:7.2
+MAINTAINER Daniel Williams <daniel.williams@ligo.org>
 
 RUN yum -y groupinstall "Development Tools" "Development Libraries"
 RUN yum install -y zlib-devel fftw-devel libxml2-devel glib2-devel
+RUN yum install -y wget
 
 # GSL (latest version is not in RPM)
 RUN mkdir -p /opt/gsl/src \
