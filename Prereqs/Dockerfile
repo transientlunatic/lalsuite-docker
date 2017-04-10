@@ -30,7 +30,7 @@ RUN mkdir -p /opt/metaio/src \
  && cd /opt/metaio/src \
  && wget http://software.ligo.org/lscsoft/source/metaio-8.4.0.tar.gz -O - \
     | tar xzf - \
- && cd /opt/metaio/src/metaio-8.3.0 \
+ && cd /opt/metaio/src/metaio-8.4.0 \
  && ./configure \
  && make \
  && make install
