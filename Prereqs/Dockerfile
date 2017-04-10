@@ -28,7 +28,7 @@ RUN mkdir -p /opt/framel/src \
 # MetaIO
 RUN mkdir -p /opt/metaio/src \
  && cd /opt/metaio/src \
- && wget https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/metaio-8.3.0.tar.gz -O - \
+ && wget http://software.ligo.org/lscsoft/source/metaio-8.4.0.tar.gz -O - \
     | tar xzf - \
  && cd /opt/metaio/src/metaio-8.3.0 \
  && ./configure \
