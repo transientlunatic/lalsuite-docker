@@ -1,5 +1,5 @@
-FROM waisbrot/lalsuite-prereqs-docker
-MAINTAINER Nathaniel Waisbrot <code@waisbrot.net>
+FROM lpmn/lalsuite-prereqs
+MAINTAINER Daniel Williams <daniel.williams@ligo.org>
 
 ENV LSCSOFT_ROOTDIR= \
     LSCSOFT_SRCDIR=/opt/src/lscsoft
@@ -10,5 +10,5 @@ RUN git config --global user.name "Anonymous" \
 
 
 WORKDIR $LSCSOFT_SRCDIR
-RUN git clone git://ligo-vcs.phys.uwm.edu/lalsuite.git .
+RUN git clone https://github.com/lscsoft/lalsuite.git .
 RUN ./00boot && ./configure && make && make install
