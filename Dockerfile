@@ -1,4 +1,4 @@
-FROM lpmn/lalsuite-prereqs
+FROM lpmn/lalsuite-prerequisites
 MAINTAINER Daniel Williams <daniel.williams@ligo.org>
 
 ENV LSCSOFT_ROOTDIR= \
