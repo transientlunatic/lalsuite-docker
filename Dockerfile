@@ -11,4 +11,5 @@ RUN git config --global user.name "Anonymous" \
 
 WORKDIR $LSCSOFT_SRCDIR
 RUN git clone https://github.com/lscsoft/lalsuite.git .
+git checkout minke
 RUN ./00boot && ./configure --enable-swig-python && make  && make install 
