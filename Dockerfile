@@ -9,6 +9,7 @@ ENV LSCSOFT_ROOTDIR= \
 RUN git config --global user.name "Anonymous" \
  && git config --global user.email anonymous@example.com
 
+RUN yum install -y which
 
 WORKDIR $LSCSOFT_SRCDIR
 RUN git clone https://github.com/lscsoft/lalsuite.git .
@@ -17,8 +18,9 @@ RUN ./00boot \
  && ./configure --enable-swig-python --prefix=/usr/local/ \
  && make \
  && make install 
-RUN echo ". /opt/src/lscsoft/_inst/etc/lalsuiterc" >> ${HOME}/.bashrc
-RUN cd pylal \
- && python setup.py install \
- && ../glue && python setup.py install \
- && make clean
+RUN echo ". /usr/local/etc/lalsuiterc" >> ${HOME}/.bashrc
+RUN . /usr/local/etc/lalsuiterc a \
+    && cd pylal \
+&& python setup.py install \
+&& cd glue && python setup.py install \
+&& cd ../ && make clean
