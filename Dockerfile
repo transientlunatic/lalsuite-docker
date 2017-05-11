@@ -22,5 +22,5 @@ RUN echo ". /usr/local/etc/lalsuiterc" >> ${HOME}/.bashrc
 RUN . /usr/local/etc/lalsuiterc a \
     && cd pylal \
 && python setup.py install \
-&& cd glue && python setup.py install \
+&& cd ../glue && python setup.py install \
 && cd ../ && make clean
