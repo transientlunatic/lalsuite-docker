@@ -24,3 +24,5 @@ RUN . /usr/local/etc/lalsuiterc a \
 && python setup.py install \
 && cd ../glue && python setup.py install \
 && cd ../ && make clean
+
+CMD ["/bin/sh", "/usr/local/etc/lalsuiterc"]
